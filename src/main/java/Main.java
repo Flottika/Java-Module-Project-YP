@@ -16,7 +16,7 @@ public class Main {
             sum += good.price;
         }
         double eachSum=Math.round(sum*100/numOfGuests);
-        System.out.printf("Итого каждый гость должен заплатить по %.2f %s\n", eachSum/100, rubl(sum));
+        System.out.printf("Итого каждый гость должен заплатить %.2f %s\n", eachSum/100, rubl(eachSum/100));
     }
     private static int guestNum() {
         System.out.println("На сколько человек разделить счет?");
@@ -90,14 +90,11 @@ public class Main {
             }
         }
         switch (strSum.charAt(k)) {
-                case '1':
-                return ("рубль");
-                case '2':
-                case '3':
-                case '4':
-                    return ("рубля");
-                    default:
-                    return ("рублей");
+            case '1': return ("рубль");
+            case '2':
+            case '3':
+            case '4': return ("рубля");
+            default: return ("рублей");
             }
         }
     }
